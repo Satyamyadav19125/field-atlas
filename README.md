@@ -1,63 +1,40 @@
-# Field Atlas — Kharif 2025
+# Field Atlas — Kharif 2025 (Level 3)
 
 An interactive, map-first dashboard of the Kharif-2025 field study: water level, water
-meter, methane, and the endline "Farm Info", all tied to each farm on a real map
-(satellite / topographic / political basemaps).
+meter, methane, farm info and **field photos**, all tied to each farm on a real map
+(satellite / topographic / streets, dark & light). Static site — no server, no database.
 
-It is a **static site** — one `index.html` file with the data baked in. No server, no
-database. You can double-click `index.html` to run it locally, or host it online for free
-(below).
+Live: https://field-atlas-ashy.vercel.app/
 
----
+## What's in this folder (push ALL of it to GitHub)
+- `index.html` — the whole tool
+- `photos/` — the field-photo thumbnails (referenced by the tool)
+- `apple-touch-icon.png`, `icon.svg`, `icon-192.png`, `icon-512.png`, `favicon-32.png` — the app icon (home-screen icon on iOS)
+- `README.md`
 
-## Put it online with Vercel (free — about 5 minutes)
+> Since Level 3 adds photos and an icon, you now upload the **whole folder**, not just
+> `index.html`. On github.com open your repo → **Add file → Upload files** → drag the
+> **contents of this folder** in (or drag the `field-atlas-repo` folder) → **Commit**.
+> Vercel redeploys automatically. (After the first time, to update the tool you only
+> replace `index.html` again.)
 
-You already use Vercel for the pipe tool, so this is the same flow.
+## Put it online with Vercel (first time)
+1. github.com → **New repository** (Public) → Create.
+2. **Upload files** → drag everything in this folder → **Commit**.
+3. vercel.com → sign in with GitHub → **Add New → Project** → Import the repo → **Deploy**.
+4. You get a link like `https://field-atlas.vercel.app`.
 
-### Step 1 — Put these files on GitHub
-1. Go to **https://github.com** and sign in.
-2. Click the **+** (top-right) → **New repository**.
-3. Name it e.g. `field-atlas` → keep it **Public** (or Private, both work) → **Create repository**.
-4. On the new repo page click **“uploading an existing file”**.
-5. Drag in the **contents of this folder** — `index.html` and `README.md` — and click **Commit changes**.
-   *(If you were given a `.zip`, unzip it first, then upload the files inside.)*
+## Run it locally
+Open `index.html` in a browser (keep it inside this folder so the `photos/` load).
+Needs internet for the map imagery.
 
-### Step 2 — Deploy on Vercel
-1. Go to **https://vercel.com** and sign in **with GitHub**.
-2. Click **Add New… → Project**.
-3. Find your `field-atlas` repo in the list → **Import**.
-4. Leave every setting at its default (Framework Preset = **Other**; no build command needed —
-   it's a plain static site).
-5. Click **Deploy**. Wait ~30 seconds.
-6. You get a live link like `https://field-atlas.vercel.app`. That's your tool, online. Share it.
+## Admin
+The 🔒 button (password **`dv2025`**) unlocks a Settings tab: theme, base map, and which
+map layers show. Everyone else sees the finished product.
 
-### Step 3 — Updating it later
-Whenever the tool changes, replace `index.html` in the GitHub repo (upload the new file,
-Commit). Vercel redeploys automatically within a minute — same link.
-
-### Optional — a custom web address
-In Vercel: your project → **Settings → Domains** → add a domain you own (e.g.
-`atlas.yourlab.org`). Follow the DNS instructions it shows.
-
----
-
-## Run it locally (no internet host needed)
-Double-click `index.html`. It opens in your browser. (It needs internet **while open** so the
-satellite/street map imagery can load — that part streams from map servers.)
-
----
-
-## What's inside
-- `index.html` — the entire tool (HTML + CSS + JavaScript + the data, all in one file).
-- Data is the joined Kharif-2025 bundle: ~441 monitored farms across 39 villages.
-
-## Notes / next steps
-- Uses the **revised** `kharif25_all_pipes_readings.xlsx` (QC'd water) and
-  `kharif25_meter_for_tool.xlsx` (per-farm daily m³/acre).
-- **Crop-calendar phases** are the real 5 stages — Sowing · Transplant · Vegetative ·
-  Flowering · Grain-fill — from each farm's dates in the meter `master` tab.
-- Study groups (AWD control/treatment/training) are intentionally ignored — all farms treated
-  as one.
-- **Methane** covers only the sampled fields (no season time-series exists for it).
-- Field **photos** (Google-Drive folder) and **remote-sensing layers** (like the Earth Engine
-  app) are not wired in yet — planned next.
+## Notes
+- Data is fixed for Kharif 2025 (from the KML + Excel). To change the numbers we re-import
+  and ship a new Level.
+- Photos: 286 of the 441 farms have field photos (the ones the team shared).
+- Crop stages: Nursery · Transplanting · Vegetative · Reproductive · Maturity (stages with
+  no readings are hidden).
