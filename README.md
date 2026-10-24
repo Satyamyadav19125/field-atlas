@@ -1,4 +1,19 @@
-# Field Atlas — Kharif 2025 (Level 9)
+# Field Atlas — Kharif 2025 (Level 11)
+
+## What's new in Level 11
+- **Selecting a farm sticks across tabs.** Tap a field, then switch to Water level / Water
+  meter / Methane and you stay on *that field's* details instead of jumping back to the summary.
+- **AWD pipes & tubewells re-synced from the latest KML** (Digital Village 2023‑26): 1,300+
+  pipe points across ~400 farms — the ones that were missing are now on the map. See
+  `KML-pipe-matching-report.txt` for the farms whose pipe isn't in the KML yet.
+- **New, distinct map icons** — AWD pipe points are teal ringed dots, tubewells are navy pins.
+  Both show by default; hide either in the map's ▧ layer menu.
+- **Scrolling fixed on laptops/tablets** — scrolling over the map no longer "traps" the page
+  (wheel‑zoom is off on narrow screens; use +/− or pinch to zoom).
+- **A field photo on every farm**, and the **Water meter tab no longer shows a photo**.
+
+## Level 10
+- Internal cleanup: removed unused code/CSS. No visible change.
 
 ## What's new in Level 9
 - **Photos are back — pipe *and* field.** Both the tape-meter-inside-the-pipe shot and the
