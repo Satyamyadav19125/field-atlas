@@ -1,4 +1,13 @@
-# Field Atlas — Kharif 2025 (Level 11)
+# Field Atlas — Kharif 2025 (Level 12)
+
+## What's new in Level 12
+- **Photos split correctly**: the **Water level** tab shows the *AWD pipe* photo and the
+  **Water meter** tab shows the *water-meter* photo. Methane/other tabs show no photo (and a
+  field not in the methane project now says so instead of showing a stray photo).
+- **Villages legend is collapsed by default** — tap "📍 Villages" to expand it.
+- **The header, tabs and search now scroll away** with the content, and switching tabs
+  **jumps back to the top**.
+- Word **"study" replaced with "project"** throughout; the level number removed from the header.
 
 ## What's new in Level 11
 - **Selecting a farm sticks across tabs.** Tap a field, then switch to Water level / Water
